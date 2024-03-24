@@ -1,0 +1,2 @@
+{:paths ["src/clj"]
+ :deps {org.knowm.xchart/xchart {:mvn/version "3.2.1"}}}
