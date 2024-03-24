@@ -1,7 +1,6 @@
 (ns com.hypirion.clj-xchart.opt
   "A namespace for clj-xchart with several optimisations when you run on big
-  datasets."
-  (:import (com.hypirion.clj_xchart ListMapping)))
+  datasets.")
 
 (defn extract-field
   "Returns an immutable view over sequence mapped by field (can be a
@@ -10,7 +9,7 @@
 
   Immutable in this context means cannot be updated, even persistently."
   [field list]
-  (ListMapping. list field))
+  (eduction (map field) list))
 
 (defn extract-series
   "Transforms coll into a series map by using the values in the
